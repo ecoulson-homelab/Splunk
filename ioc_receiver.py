@@ -26,7 +26,7 @@ class IOCReceiver:
 
         self.splunk_util = splunkUtil.splunkUploader()
 
-        #Get the time parameters for the last hour
+        # Get the time parameters for the last hour
         self.one_hour_ago = datetime.now().replace(microsecond=0) - timedelta(hours=1)
         self.one_hour_ago = self.one_hour_ago.strftime("%Y-%m-%dT%H:%M:%SZ")
         self.today = datetime.now().replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
